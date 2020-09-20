@@ -1,0 +1,17 @@
+header{
+    height: 80px;
+    background-color: $headerColor;
+    display: flex;
+    align-items: center;
+    img{
+        height: 50px;
+        margin: 0 20px;
+    }
+    #header-menu {
+        list-style: none;
+        display: flex;
+        li{
+            padding-right: 30px;
+        }
+    }
+}

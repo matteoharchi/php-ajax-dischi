@@ -1,0 +1,12 @@
+@mixin cards {
+    margin: 30px;
+    background-color: $cardsColor;
+    img.cover{
+            width: 300px;
+            height: 300px;
+        }
+}
+
+.card{
+    @include cards;
+} 
