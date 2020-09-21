@@ -1,11 +1,3 @@
-<?php 
-include 'src/db.php';
-
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,34 +16,38 @@ include 'src/db.php';
             <li>Playlist</li>
             <li>La tua musica</li>
             <li>Filtra per Artista: 
-                <select name="" id="select-genre">
-                    <option value="Queen">Queen</option>
-                    <option value="Bon Jovi">Bon Jovi</option>
-                    <option value="Steve Gadd Band">Steve Gadd Band</option>
-                    <option value="Iron Maiden">Iron Maiden</option>
-                    <option value="Eric Clapton">Eric Clapton</option>
-                    <option value="Sting">Sting</option>
-                </select>
-            </li>
+                <form action="?artist=" method='post'>
+                    <select name="" id="select-artist">
+                        <option value="Queen"> Queen</option>
+                        <option value="Bon Jovi">Bon Jovi</option>
+                        <option value="Steve Gadd Band">Steve Gadd Band</option>
+                        <option value="Iron Maiden">Iron Maiden</option>
+                        <option value="Eric Clapton">Eric Clapton</option>
+                        <option value="Sting">Sting</option>
+                    </select>
+                    <input type="submit" value="Cerca">
+                </li>
+
+                </form>
             
         </ul>    
         </header>
     <main>
         <div class="container">
-            <?php foreach ($database as $album) {?>
+            <script id="template" type="text/x-handlebars-template">
                 <div class="card">
                 
-                    <img class='cover' src="<?php echo $album['poster'] ?>" alt="">
-                    <p> <?php echo $album['title']; ?> </p> 
-                    <p><?php echo $album['author'] ?></p>
-                    <p><?php echo $album['year'] ?></p>
+                    <img class='cover' src="{{{cover}}}" alt="">
+                    <p> {{titolo}} </p> 
+                    <p>{{autore}}</p>
+                    <p>{{anno}}</p>
                 </div>
-            <?php } ?>
+            </script>
     
     
         </div>
 
     </main>
-
+    <script src="dist/app.js"></script>
 </body>
 </html>
