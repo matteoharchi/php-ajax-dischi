@@ -16,7 +16,7 @@
             <li>Playlist</li>
             <li>La tua musica</li>
             <li>Filtra per Artista: 
-                <form action="?artist=" method='post'>
+                <!-- <form action="?artist=" method='post'> -->
                     <select name="" id="select-artist">
                         <option value="Queen"> Queen</option>
                         <option value="Bon Jovi">Bon Jovi</option>
@@ -26,9 +26,9 @@
                         <option value="Sting">Sting</option>
                     </select>
                     <input type="submit" value="Cerca">
-                </li>
+                <!-- </form> -->
+            </li>
 
-                </form>
             
         </ul>    
         </header>
